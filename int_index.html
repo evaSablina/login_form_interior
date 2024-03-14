@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <link rel="stylesheet" href="int_style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="form__box">
+            <form action="" name="FormFill" onsubmit="return validation()">
+                <h2>Register</h2>
+                <p id="result"></p>
+                <div class="input__box">
+                    <input type="text" name="Username" placeholder="Username">
+                </div>
+                <div class="input__box">
+                    <input type="email" name="Email" placeholder="Email">
+                </div>
+                <div class="input__box">
+                    <input type="password" name="Password" placeholder="Password">
+                </div>
+                <div class="form__button">
+                    <input type="submit" class="button" onclick="validation()" value="Sign Up">
+                </div>
+                <div class="text__group">
+                    <span>
+                        <p>By creating an account you agree with our <a href="#">Terms</a> and <a href="#">Private Policy</a></p>
+                    </span>
+                    <div class="line"></div>
+                    <span>
+                        <p>Already have an account <a href="#">Log In</a></p>
+                    </span>
+                </div>
+            </form>
+        </div>
+        <div class="popup" id="popup">
+            <ion-icon name="checkmark-circle-outline"></ion-icon>
+            <h2>Thank You!</h2>
+            <p>Your registration was completed!</p>
+            <a href="#"><button onclick="closeSlide()">OK</button></a>
+        </div>
+    </div>
+    <!-- Поместите скрипт внутри тега <body> -->
+    <script src="int_script.js"></script>
+</body>
+
+</html>

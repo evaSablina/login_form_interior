@@ -1,0 +1,210 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+body {
+    background: url(int_main.png) no-repeat;
+    /* Rastagivaet foto po fonu kak nado */
+    background-position: center;
+    background-size: cover;
+    min-height: 100vh;
+    width: 100%;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.form__box {
+    position: relative;
+    width: 400px;
+    height: 600px;
+    /* border: 1px solid #454545; */
+    /* border-radius: 10px;
+    background-color: #454545; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form__box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.8;
+    backdrop-filter: blur(35px);
+    z-index: -1;
+    border-radius: 10px;
+    background-color: #DAC0A3;
+}
+
+.form__box h2 {
+    color: #3E3232;
+    text-align: center;
+    font-size: 30px;
+}
+
+
+/* liniya pod placeholderom */
+
+.input__box {
+    position: relative;
+    margin: 30px 0;
+    width: 100%;
+    /* width: 310px; */
+    border-bottom: 1px solid #3E3232;
+}
+
+
+/* rabotaem s formoy qde pishu placeholder */
+
+.input__box input {
+    width: 100%;
+    height: 30px;
+    background: transparent;
+    border: none;
+    outline: none;
+    padding: 0 20px 0 5px;
+    /* color: #3E3232; */
+    font-size: 12px;
+}
+
+input::placeholder {
+    color: #3E3232;
+}
+
+
+/* Центрируем текст placeholder */
+
+.input__box input::placeholder {
+    text-align: center;
+}
+
+.form__button {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    /* Добавим немного отступа сверху */
+}
+
+.button {
+    color: #DAC0A3;
+    background: #3E3232;
+    width: 250px;
+    /* width: 100%; */
+    height: 40px;
+    border-radius: 50px;
+    /* outline: none; */
+    border: none;
+    font-size: 13px;
+    cursor: pointer;
+    /* box-shadow: 3px 0 10px black; */
+}
+
+.text__group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 15px;
+}
+
+
+/* .text__group {
+    display: inline-block;
+    justify-content: center;
+} */
+
+.line {
+    background-color: #3E3232;
+    width: 100%;
+    height: 1px;
+    border-radius: 50px;
+    margin-top: 50px;
+}
+
+.text__group p {
+    font-size: 11px;
+    height: 50px;
+    padding-top: 12px;
+}
+
+.text__group a {
+    color: #3E3232;
+    position: relative;
+    /* top: 10px; */
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.text__group a:focus {
+    text-decoration: underline;
+}
+
+#result {
+    color: red;
+    font-weight: 600;
+    position: relative;
+    top: 25px;
+}
+
+
+/* color: svetliy #DAC0A3;
+background: #3E3232; */
+
+.popup {
+    width: 400px;
+    background-color: #3E3232;
+    border-radius: 6px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform .4s, top .4s;
+    visibility: hidden;
+    text-align: center;
+    padding: 30px 30px 30px;
+    height: 330px;
+    color: #DAC0A3;
+}
+
+.popup ion-icon {
+    color: #DAC0A3;
+    font-size: 50px;
+}
+
+.popup button {
+    width: 100%;
+    background: #DAC0A3;
+    padding: 10px 0;
+    margin-top: 50px;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    color: #3E3232;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.1);
+}
+
+.popup a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+.open-slide {
+    top: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    visibility: visible;
+}
